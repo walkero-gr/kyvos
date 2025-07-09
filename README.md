@@ -32,15 +32,21 @@ To set up an AmigaOS 4 system there is a need to have some files ready to be use
 A list of them can be seen below:
 
 - AmigaOS 4.1 FE
+  
+  The follow files can be obtained from https://www.hyperion-entertainment.com/ after you register your copy of AmigaOS 4.1 FE for Pegasos2 or AmigaOne systems. To buy the AmigaOS 4.1 FE please check the Hyperion dealers at https://www.hyperion-entertainment.com/index.php/where-to-buy/dealers
   - The AmigaOS 4.1 FE ISO image named as **AmigaOneInstallCD-53.54.iso** if you emulate an AmigaOne system, or **Pegasos2InstallCD-53.54.iso** for an emulated Pegasos2 system
   - The AmigaOS 4.1 FE update 1 archive, named **AmigaOS4.1FinalEditionUpdate1-final.lha**
   - The AmigaOS 4.1 FE update 2 archive, named **AmigaOS4.1FinalEditionUpdate2-53.14.lha**
 - MorphOS
+
+  The MorphOS 3.19 ISO image can be downloaded free of charge from https://www.morphos-team.net/downloads. Have in mind that this is limited to 30 minutes free usage, and when it is run on emulated environments it cannot be registered to avoid this limitation. 
   - The MorphOS 3.19 ISO images, named as **morphos-3.19.iso**
+ 
+  When a later version of MorphOS or AmigaOS 4 is released, a newer version of Kyvos will be created to support them.
  
 ## Installation
 
-The installation of Kyvos is straightforward. Download from my [Ko-Fi page](https://ko-fi.com/walkero) the archive based on your system, extract it wherever you like and run it. It creates a folder under the user path named **.kyvos_app** where it stores the drivers that are downloaded and a sqlite db file with information about the virtual environments the user creates.
+The installation of Kyvos is straightforward. Download from my [Ko-Fi page](https://ko-fi.com/walkero) the archive based on your system (Linux, macOS or Windows), extract it wherever you like and run it. It creates a folder under the user path named **.kyvos_app** where it stores the drivers that are downloaded and an sqlite db file with information about the virtual environments the user creates.
 
 ## Virtual environment creation
 
@@ -48,3 +54,6 @@ Setting up a system is a matter of providing a name, choosing the system type fr
 
 From there it is a matter to install the system on the already created and assigned hard disk. Also, it is possible, after the installation, to unmount the CD (ISO) and boot straight into the hard disk, if the installation was done correctly.
 
+### virtio-gpu
+
+If you happen to have access to virtio-gpu for AmigaOS 4, and you would like to use it, download the lha file into the same place where the AmigaOS 4 ISO file are and rename it as **VirtioGPU.lha**, before you create a new virtual environment. This will include the driver in the kickstart.zip file automatically. To use it, you have to select the virtio-gpu device in the display tab of the VM. To do that, select the VM from the left sidebar, click on the "Display" tab, select the **virtio-gpu** in the "Gfx device" field and click "Save". It is recommended to also check the "Show Cursor" checkbox, in case you do not see the mouse pointer in the Qemu window.
