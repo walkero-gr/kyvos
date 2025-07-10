@@ -4,7 +4,7 @@ There are plenty of people who find it tricky to make installations using Qemu o
 
 ## Dependencies
 
-Kyvos depends on [Qemu](https://www.qemu.org/) and [7zip](https://www.7-zip.org/) being installed in the host OS. It is recommended to use Qemu v10.0.0 and above, that provides the best emulation for AmigaOne systems so far. Please consult the pages of the above software on how to install them.
+Kyvos depends on [Qemu](https://www.qemu.org/) and [7zip](https://www.7-zip.org/) being installed in the host OS. It is recommended to use **Qemu v10** and above, that provides the best emulation for AmigaOne systems so far. Please consult the pages of the above software on how to install them.
 
 When starting Kyvos for the first time, it tries to figure out where exactly the dependencies are installed and use them. Please verify that they are installed in a place in the hard disk where the rest of the system has access.
 
