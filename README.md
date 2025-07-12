@@ -35,7 +35,7 @@ A list of them can be seen below:
   
   The follow files can be obtained from https://www.hyperion-entertainment.com/ after you register your copy of AmigaOS 4.1 FE for Pegasos2 or AmigaOne systems. To buy the AmigaOS 4.1 FE please check the Hyperion dealers at https://www.hyperion-entertainment.com/index.php/where-to-buy/dealers
   - The AmigaOS 4.1 FE ISO image named as **AmigaOneInstallCD-53.54.iso** if you emulate an AmigaOne system, or **Pegasos2InstallCD-53.54.iso** for an emulated Pegasos2 system
-  - The AmigaOS 4.1 FE update 1 archive, named **AmigaOS4.1FinalEditionUpdate1-final.lha**
+  - The AmigaOS 4.1 FE update 1 archive, named **AmigaOS4.1FinalEditionUpdate1.lha**
   - The AmigaOS 4.1 FE update 2 archive, named **AmigaOS4.1FinalEditionUpdate2-53.14.lha**
 - MorphOS
 
