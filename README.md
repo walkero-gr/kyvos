@@ -1,59 +1,54 @@
-Kyvos is a Qemu frontend designed to help users create AmigaOS 4 and MorphOS emulated environments on Linux, macOS or Windows systems. Kyvos is pronounced as kee-vos. It comes from the Greek word κύβος and it is translated as cube. I consider the virtual AmigaOS 4 and MorphOS systems as cubes, leaving inside your host OS. It is available for Linux, macOS and Windows and can be downloaded from my [Ko-Fi page](https://ko-fi.com/walkero).
+Kyvos is a frontend for Qemu that facilitates the creation of AmigaOS 4 and MorphOS emulated environments on Linux, macOS, or Windows systems. Kyvos is pronounced as kee-vos, deriving from the Greek word "κύβος," meaning **cube** in English. The virtual AmigaOS 4 and MorphOS systems are viewed as cubes, operating within the host OS. Kyvos is accessible for Linux, macOS, and Windows and can be downloaded from the [Ko-Fi page](https://ko-fi.com/walkero).
 
-There are plenty of people who find it tricky to make installations using Qemu on their systems, get all the necessary files and follow 3 pages of instructions just to make the system boot. My goal is to ease a little bit of that pain and give the option to more people to try it. And maybe have their first experience with AmigaOS 4 and MorphOS. Of course, emulating these operating systems will not provide the best experience, but the tools are already out there. So why not use them?
+Many individuals encounter difficulties when attempting to install Qemu on their systems, acquiring all necessary files, and adhering to lengthy instructions to boot the system. The aim is to mitigate some of these challenges, thereby broadening the accessibility for others to experience AmigaOS 4 and MorphOS. While emulating these operating systems may not deliver the optimal experience, the tools are available for exploration.
 
-## Dependencies
+## Installation
 
-Kyvos depends on [Qemu](https://www.qemu.org/) and [7zip](https://www.7-zip.org/) being installed in the host OS. It is recommended to use **Qemu v10** and above, that provides the best emulation for AmigaOne systems so far. Please consult the pages of the above software on how to install them.
+Installing Kyvos is a straightforward process. Download the appropriate archive for the system (Linux, macOS, or Windows) from the [Ko-Fi page](https://ko-fi.com/walkero), extract it to a preferred location, and execute it. A folder named **.kyvos** is created within the user HOME folder, storing drivers that are downloaded, a preferences file and a systems file containing information about the created virtual environments.
 
-When starting Kyvos for the first time, it tries to figure out where exactly the dependencies are installed and use them. Please verify that they are installed in a place in the hard disk where the rest of the system has access.
+### Dependencies
 
-### Linux
+Kyvos requires [Qemu](https://www.qemu.org/) and [7zip](https://www.7-zip.org/) to be installed on the host OS. It is recommended to use **Qemu v10** and above for the best emulation of **AmigaOne** systems running the AmigaOS 4. Refer to the respective software pages for installation instructions.
 
-QEMU is provided by the package manager of most Linux distributions. So, use `apt` or `yum` or `pacman` or whatever is available to install Qemu and 7zip.
+Upon initial launch, Kyvos attempts to locate the installed dependencies and utilize them. It is essential to ensure they are installed in locations accessible to the rest of the system.
 
-### macOS
+#### Linux
 
-I would recommend to use Homebrew and installed the following packages
+Most Linux distributions provide QEMU through package managers. Use `apt`, `yum`, `pacman`, or other available package managers to install Qemu and 7zip.
+
+#### macOS
+
+Homebrew is recommended for installation, with the following commands:
 
 ```
 brew install qemu
 brew install p7zip
 ```
 
-### Windows
+#### Windows
 
-I recommend using the installers provided by [Stefan Weil's](https://qemu.weilnetz.de/w64/) and [7zip](https://www.7-zip.org/) websites.
+The installers from [Stefan Weil's](https://qemu.weilnetz.de/w64/) website for Qemu and [7zip](https://www.7-zip.org/) are recommended.
 
-## Drivers and OS files
+### Drivers and AmigaOS 4/MorphOS Files
 
-To set up an AmigaOS 4 system there is a need to have some files ready to be used. All these required files need to be stored inside a folder in your system, which the user provides when requested during the VM setup.
+To establish an AmigaOS 4 or MorphOS virtual system, certain files must be manually downloaded and stored in a designated directory. Kyvos will request access to this folder when initiating the automated creation of a new virtual machine.
 
-A list of them can be seen below:
+Below is a list of required files:
 
-- AmigaOS 4.1 FE
-  
-  The follow files can be obtained from https://www.hyperion-entertainment.com/ after you register your copy of AmigaOS 4.1 FE for Pegasos2 or AmigaOne systems. To buy the AmigaOS 4.1 FE please check the Hyperion dealers at https://www.hyperion-entertainment.com/index.php/where-to-buy/dealers
-  - The AmigaOS 4.1 FE ISO image named as **AmigaOneInstallCD-53.54.iso** if you emulate an AmigaOne system, or **Pegasos2InstallCD-53.54.iso** for an emulated Pegasos2 system
-  - The AmigaOS 4.1 FE update 1 archive, named **AmigaOS4.1FinalEditionUpdate1.lha**
-  - The AmigaOS 4.1 FE update 2 archive, named **AmigaOS4.1FinalEditionUpdate2-53.14.lha**
-- MorphOS
+- For creating an **AmigaOS 4.1 FE** based system:
 
-  The MorphOS 3.19 ISO image can be downloaded free of charge from https://www.morphos-team.net/downloads. Have in mind that this is limited to 30 minutes free usage, and when it is run on emulated environments it cannot be registered to avoid this limitation. 
-  - The MorphOS 3.19 ISO images, named as **morphos-3.19.iso**
- 
-  When a later version of MorphOS or AmigaOS 4 is released, a newer version of Kyvos will be created to support them.
- 
-## Installation
+  These files are available from [Hyperion Entertainment](https://www.hyperion-entertainment.com/) after registering a copy of AmigaOS 4.1 FE for Pegasos2 or AmigaOne systems. For purchasing AmigaOS 4.1 FE, refer to the [Hyperion dealers](https://www.hyperion-entertainment.com/index.php/where-to-buy/dealers).
 
-The installation of Kyvos is straightforward. Download from my [Ko-Fi page](https://ko-fi.com/walkero) the archive based on your system (Linux, macOS or Windows), extract it wherever you like and run it. It creates a folder under the user path named **.kyvos_app** where it stores the drivers that are downloaded and an sqlite db file with information about the virtual environments the user creates.
+  - **AmigaOneInstallCD-53.54.iso** for emulating an **AmigaOne** system, or **Pegasos2InstallCD-53.54.iso** for a **Pegasos2** system
+  - **AmigaOS4.1FinalEditionUpdate1.lha** archive
+  - **AmigaOS4.1FinalEditionUpdate2-53.14.lha** archive
 
-## Virtual environment creation
+  ***Note:*** *It is necessary to provide ISO files and not the archives of them, as provided by Hyperion Entertainment. If the LHA files were downloaded, please extract them before using them with the Kyvos application*
 
-Setting up a system is a matter of providing a name, choosing the system type from a select list, providing a destination path where the files will be saved and a directory where the necessary files like the AmigaOS 4/MorphOS ISO files and the update archives are stored. And that's it. Click "Create" and the automated setup will create all the needed files to let you just click play and boot into the installation process.
+- For creating a **MorphOS** based system:
 
-From there it is a matter to install the system on the already created and assigned hard disk. Also, it is possible, after the installation, to unmount the CD (ISO) and boot straight into the hard disk, if the installation was done correctly.
+  The MorphOS 3.19 ISO image can be downloaded at no cost from [MorphOS Team](https://www.morphos-team.net/downloads), though usage is limited to 30 minutes in emulated environments and cannot be registered to remove this limitation.
 
-### virtio-gpu
+  - **morphos-3.19.iso**
 
-If you happen to have access to virtio-gpu for AmigaOS 4, and you would like to use it, download the lha file into the same place where the AmigaOS 4 ISO file are and rename it as **VirtioGPU.lha**, before you create a new virtual environment. This will include the driver in the kickstart.zip file automatically. To use it, you have to select the virtio-gpu device in the display tab of the VM. To do that, select the VM from the left sidebar, click on the "Display" tab, select the **virtio-gpu** in the "Gfx device" field and click "Save". It is recommended to also check the "Show Cursor" checkbox, in case you do not see the mouse pointer in the Qemu window.
+Future versions of Kyvos will support new releases of MorphOS or AmigaOS 4 as they are available.
