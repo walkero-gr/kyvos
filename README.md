@@ -4,7 +4,7 @@ Many individuals encounter difficulties when attempting to install Qemu on their
 
 ## Installation
 
-Installing Kyvos is a straightforward process. Download the appropriate archive for the system (Linux, macOS, or Windows) from the [Ko-Fi page](https://ko-fi.com/walkero), extract it to a preferred location, and execute it. A folder named **.kyvos** is created within the user HOME folder, storing drivers that are downloaded, a preferences file and a systems file containing information about the created virtual environments.
+Installing Kyvos is a straightforward process. Download the appropriate archive for the system (Linux, macOS, or Windows) from the [Ko-Fi page](https://ko-fi.com/s/6476fdadd2), extract it to a preferred location, and execute it. A folder named **.kyvos** is created within the user HOME folder, storing drivers that are downloaded, a preferences file and a systems file containing information about the created virtual environments.
 
 ### Dependencies
 
