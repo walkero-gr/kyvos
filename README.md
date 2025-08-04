@@ -52,3 +52,7 @@ Below is a list of required files:
   - **morphos-3.19.iso**
 
 Future versions of Kyvos will support new releases of MorphOS or AmigaOS 4 as they are available.
+
+## Aknowledgements
+- Kyvos would not be possible without the work done by Balaton Zoltan, his shared knowledge at [http://qmiga.codeberg.page/](http://qmiga.codeberg.page/) and his [bboot tool](https://codeberg.org/qmiga/pages/wiki/SubprojectBBoot).
+- This software uses icons by Streamline [http://streamlinehq.com](http://streamlinehq.com) under Attribution 4.0 International (CC BY 4.0) license.
